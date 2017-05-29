@@ -1,0 +1,84 @@
+.ui-toc-dropdown {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 15vw;
+  max-height: 70vh;
+  overflow: auto;
+  margin-top: 23px;
+  margin-right: 23px;
+  text-align: inherit;
+
+  @media screen and (max-width: $small-phone) {
+    visibility: hidden;
+  }
+  @media screen and (max-width: $tablet) {
+    max-width: 80%;
+  }
+  @media screen and (max-width: $large-tablet) {
+    margin-right: 0;
+  }
+
+  > .toc {
+    max-height: calc(70vh - 100px);
+    overflow: auto;
+  }
+  a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+  }
+  .nav {
+    > li {
+      > a {
+        display: block;
+        padding: 4px 20px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #767676;
+      }
+      &:first-child:last-child > ul {
+        display: block;
+      }
+      > a {
+        &:focus, &:hover {
+          padding-left: 19px;
+          color: #000;
+          text-decoration: none;
+          background-color: transparent;
+          border-left: 1px solid #000;
+        }
+      }
+    }
+    .nav {
+      display: none;
+      padding-bottom: 10px;
+      > li > {
+        a {
+          padding-top: 1px;
+          padding-bottom: 1px;
+          padding-left: 30px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        ul > li > a {
+          padding-top: 1px;
+          padding-bottom: 1px;
+          padding-left: 40px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        a {
+          &:focus, &:hover {
+            padding-left: 29px;
+          }
+        }
+        ul > li > a {
+          &:focus, &:hover {
+            padding-left: 39px;
+          }
+        }
+      }
+    }
+  }
+}
