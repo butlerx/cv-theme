@@ -9,13 +9,16 @@
   }
 
   .icon {
-    margin: 0px;
+    margin: 0;
+
     .label {
       margin-left: 4px;
     }
   }
 
-  blockquote, div, img {
+  blockquote,
+  div,
+  img {
     page-break-inside: avoid !important;
   }
 
@@ -24,26 +27,34 @@
   }
 
   @page {
-    margin: 0.8cm;
+    margin: .8cm;
   }
 
   .markdown-body {
-    p {
-      font-size: 0.8em;
+    h2 {
+      font-size: 1.2em !important;
     }
 
-    code {
-      font-size: 0.6em;
+    h3 {
+      font-size: 1em !important;
+    }
+
+    p {
+      font-size: .8em;
     }
 
     blockquote {
+      border-bottom: 0;
+      border-left: .25em solid #ddd;
+      border-right: 0;
+      border-top: 0;
+      color: #777;
       font-size: 1em;
       padding: 0 1em;
-      color: #777;
-      border-left: .25em solid #ddd;
-      border-top: 0;
-      border-bottom: 0;
-      border-right: 0;
+
+      h4 {
+        font-size: .8em !important;
+      }
     }
   }
 }
